@@ -23,10 +23,22 @@
  * Corrleate large losses from the roulette tables with the dealer schedule
  * Determine which players and dealers were present during the largest losses
  * Process:
-     * cat 0310_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
-        * this finds the lines that display negative numbers (losses) from March 10 and copies them to a file named "Roulette Losses"
-     * cat 0312_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
-        *  this finds the losses from March 12 and appends them to the file "Roulette Losses
-     *  cat 0315_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
-     *  Here you can find the consolidated losses -> Roulette_Losses
-## Step 4: 
+     * Consolidate losses into file called "Roulette Losses"
+        * command: cat 0310_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
+            * this finds the lines that display negative numbers (losses) from March 10 and copies them to a file named "Roulette Losses"
+        * command: cat 0312_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
+            *  this finds the losses from March 12 and appends them to the file "Roulette Losses
+        *  command: cat 0315_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
+        *  Here you can find the consolidated losses -> Roulette_Losses
+    *  Find the player who's name shows up the most
+        *  command: grep -wo '[[:alpha:]]\+' Roulette_Losses | sort | uniq -dc
+            *  this will display the words that show up the most along with their wordcounts
+            *  result:
+                *   6 AM
+                *   13 Mylie
+                *   7 PM
+                *   13 Schmidt
+            *   This tells us that Mylie Schmidt was present at the roulette table for each and every significant loss (13 times)
+## Step 4: Write a Script to Find a Dealer by Date and Time
+  * Here is a screenshot of a dealer_schedule file
+
