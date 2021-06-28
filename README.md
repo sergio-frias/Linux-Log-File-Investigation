@@ -1,4 +1,4 @@
-# Linux-Archiving-Logging
+# Linux Casino Log File Investigation
 
 ## Scenario: 
  * A casino has lossed signficant amount of money on the roulette tables over the last month  
@@ -24,11 +24,9 @@
  * Determine which players and dealers were present during the largest losses
  * Process:
      * Consolidate losses into file called "Roulette Losses"
-        * command: cat 0310_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
-            * this finds the lines that display negative numbers (losses) from March 10 and copies them to a file named "Roulette Losses"
-        * command: cat 0312_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
-            *  this finds the losses from March 12 and appends them to the file "Roulette Losses
-        *  command: cat 0315_win_loss_player_data | awk '$3 ~ /-/' > Roulette_Losses
+        * command: cat 0310_win_loss_player_data | awk '$3 ~ /-/' >> Roulette_Losses
+            * this finds the lines that display negative numbers (losses) from the [March 10 Log File](Casino-Investigation/Roulette_Loss_Investigation/Player_Analysis/Roulette_Player_WinLoss_0310/0310_win_loss_player_data) and copies them to a file named "Roulette Losses"
+        *  Repeat for March 12 and 15
         *  Here you can find the consolidated losses -> Roulette_Losses
     *  Find the player who's name shows up the most
         *  command: grep -wo '[[:alpha:]]\+' Roulette_Losses | sort | uniq -dc
