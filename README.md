@@ -26,17 +26,13 @@
      * Consolidate losses into file called "Roulette Losses"
         * command: cat 0310_win_loss_player_data | awk '$3 ~ /-/' >> Roulette_Losses
             * this finds the lines that display negative numbers (losses) from the [March 10 Log File](Casino-Investigation/Roulette_Loss_Investigation/Player_Analysis/Roulette_Player_WinLoss_0310/0310_win_loss_player_data) and copies them to a file named "Roulette Losses"
-            *  Repeat for March 12 and 15 to append all losses to .[Roulette_Losses].(Casino-Investigation/Roulette_Loss_Investigation/Player_Analysis/Roulette_Losses)
-        *  Here you can find the consolidated losses -> Roulette_Losses
-    *  Find the player who's name shows up the most
+            *  Repeat for March 12 and 15 to append all losses to [Roulette_Losses](Casino-Investigation/Roulette_Loss_Investigation/Player_Analysis/Roulette_Losses)
+    *  Find the player who's name shows up the most during the biggest losses
         *  command: grep -wo '[[:alpha:]]\+' Roulette_Losses | sort | uniq -dc
             *  this will display the words that show up the most along with their wordcounts
             *  result:
-                *   6 AM
-                *   13 Mylie
-                *   7 PM
-                *   13 Schmidt
+            *  ![Player_Suspect](Casino-Investigation/Screenshots/guilty_player.png)
             *   This tells us that Mylie Schmidt was present at the roulette table for each and every significant loss (13 times)
 ## Step 4: Write a Script to Find a Dealer by Date and Time
-  * Here is a screenshot of a dealer_schedule file
+  * Click on the file to see what a typical dealer schedule looks like [0310_Dealer_Schedule](Casino-Investigation/Roulette_Loss_Investigation/Dealer_Analysis/Dealer_Schedules_0310)
 
