@@ -26,7 +26,7 @@
      * Consolidate losses into file called "Roulette Losses"
         * command: cat 0310_win_loss_player_data | awk '$3 ~ /-/' >> Roulette_Losses
             * this finds the lines that display negative numbers (losses) from the [March 10 Log File](Casino-Investigation/Roulette_Loss_Investigation/Player_Analysis/Roulette_Player_WinLoss_0310/0310_win_loss_player_data) and copies them to a file named "Roulette Losses"
-        *  Repeat for March 12 and 15
+            *  Repeat for March 12 and 15 to append all losses to .[Roulette_Losses].(Casino-Investigation/Roulette_Loss_Investigation/Player_Analysis/Roulette_Losses)
         *  Here you can find the consolidated losses -> Roulette_Losses
     *  Find the player who's name shows up the most
         *  command: grep -wo '[[:alpha:]]\+' Roulette_Losses | sort | uniq -dc
