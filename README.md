@@ -37,4 +37,11 @@
   * Click on the file to see what a typical dealer schedule looks like [0310_Dealer_Schedule](Casino-Investigation/Roulette_Loss_Investigation/Dealer_Analysis/Dealer_Schedules_0310/0310_Dealer_schedule)
   * We will use the [Dealer Finder Script](Casino-Investigation/Roulette_Loss_Investigation/Dealer_Analysis/Dealer_Schedules_0310/Roulette_Dealer_Finder_By_Time.sh) to find the dealer working at a specific time and date like so:
   * ![Dealer_Example](Casino-Investigation/Screenshots/dealer_finder_example.png)
+  * The first argument "0310" represents the date
+  * The second argument "05:00:00" represents the time
+  * The third argument specifies AM or PM
+  * The output is the name of the dealer present at that time and day
+## Conclusion
+  * Billy Jones and Mylie Schmidt were both present at the roulette able for all major casino losses
+  * Billy Jones and Mylie Scmidt are the prime suspects
 
