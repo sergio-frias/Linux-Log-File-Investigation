@@ -35,4 +35,6 @@
             *   This tells us that Mylie Schmidt was present at the roulette table for each and every significant loss (13 times)
 ## Step 4: Write a Script to Find a Dealer by Date and Time
   * Click on the file to see what a typical dealer schedule looks like [0310_Dealer_Schedule](Casino-Investigation/Roulette_Loss_Investigation/Dealer_Analysis/Dealer_Schedules_0310/0310_Dealer_schedule)
+  * We will use the [Dealer Finder Script](Casino-Investigation/Roulette_Loss_Investigation/Dealer_Analysis/Dealer_Schedules_0310/Roulette_Dealer_Finder_By_Time.sh) to find the dealer working at a specific time and date like so:
+  * ![Dealer_Example](Casino-Investigation/Screenshots/dealer_finder_example.png)
 
